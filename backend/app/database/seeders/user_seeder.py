@@ -7,6 +7,7 @@ def seed_users(db: Session):
             full_name="AMINE LEBRINI", 
              username="aminelebrini", 
              email="aminel@hr.com",
+             role="admin",
                 cin="123456789",
                 phone="1234567890",
                 password="password123"
