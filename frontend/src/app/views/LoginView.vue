@@ -101,9 +101,15 @@ export default {
         const response = await api.post('/login', {
           email: this.email,
           password: this.password,
-          remember: this.remember
         });
         console.log('Login successful:', response.data);
+        if(response.data.role === 'admin') {
+          this.$router.push('/admin-dashboard');
+        } else if(response.data.role === 'employee') {
+          this.$router.push('/employee-dashboard');
+        } else {
+          console.error('Unknown role:', response.data.role);
+        }
       } catch (error) {
         console.error('Login failed:', error);
       }
