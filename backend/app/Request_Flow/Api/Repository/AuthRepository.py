@@ -10,10 +10,13 @@ class AuthRepository:
         user = self.db.query(User).filter(User.email == login_data.email).first()
         if user and user.password == login_data.password:
             return {
-                "message": "Login successful",
-                "role": user.role,
+                "id": user.id,
                 "full_name": user.full_name,
+                "username": user.username,
                 "email": user.email,
+                "role": user.role,
+                "cin": user.cin,
+                "phone": user.phone,
             }
         else:
             return {"message": "Invalid email or password"}

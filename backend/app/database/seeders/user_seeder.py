@@ -4,9 +4,9 @@ from app.Request_Flow.Models.User import User
 def seed_users(db: Session):
     users = [
         User(
-            full_name="AMINE LEBRINI", 
-             username="aminelebrini", 
-             email="aminel@hr.com",
+            full_name="af kr", 
+             username="afaf_kr", 
+             email="af@hr.com",
              role="admin",
                 cin="123456789",
                 phone="1234567890",
